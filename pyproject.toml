@@ -1,0 +1,30 @@
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "logferry"
+version = "0.1.0"
+description = "A multi-threaded JSON log ingestor exposed to Python via PyO3"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+keywords = ["rust", "pyo3", "logging", "mlops", "parsing"]
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "maturin>=1.0"]
+
+[tool.maturin]
+# Compile the Rust extension and place it directly at the package root.
+# Change module-name to "mlops_toolkit._logferry" and add
+# python-source = "python" if embedding in a mixed-layout package.
+module-name = "logferry"
