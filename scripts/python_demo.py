@@ -6,7 +6,7 @@ Build first (from inside the logferry/ directory):
     maturin develop --release
 
 Then run:
-    python python_demo.py
+    python scripts/python_demo.py
 """
 import json
 import random

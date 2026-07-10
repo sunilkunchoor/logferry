@@ -171,7 +171,7 @@ increment.
 cargo test
 
 # End-to-end demo via Python (requires maturin develop first)
-python python_demo.py
+python scripts/python_demo.py
 ```
 
 `cargo test` exercises `ingest_chunk` and the `ingest_logs` merge logic
@@ -188,10 +188,9 @@ logferry/
 ├── pyproject.toml      # (optional) for maturin-managed distribution
 ├── src/
 │   └── lib.rs          # All Rust source: data model, validators, ingestion, PyO3 bindings
-├── python_demo.py      # End-to-end Python usage demo
+├── scripts/
+│   └── python_demo.py  # End-to-end Python usage demo
 ├── README.md           # This file
-├── EXPLAINER.md        # Concept walkthrough: ownership, Result, traits, PyO3 type bridge
-└── TUTORIALS.md        # Step-by-step PyO3 tutorial
 ```
 
 ---
